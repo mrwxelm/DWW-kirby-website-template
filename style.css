@@ -8,11 +8,11 @@
 /* set variables for colors and spaces */
 :root{
 
-    --c-orange : #FCDB2A;
+    --c-orange : #FCDBA2;
     --c-red : #DA4F5E;
     --c-blue : #063799;
 
-    --space-05 : .5em;
+    --space-05 : .5em; /* 1 em = 16px*/
     --space-1 : 1em;
     --space-2 : 2em;
     --space-3 : 3em;
@@ -20,7 +20,7 @@
 
 }
 
-/* class utilities for flexbox */
+/* class utilities for flexbox, utility class = class that does one thing */
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -55,6 +55,10 @@
   align-items: flex-end;
 }
 
+.small-gap{
+  gap: var(--space-1);
+
+}
 
 body {
 
@@ -64,4 +68,46 @@ body {
 
     /* how to use variables */
     background-color : var(--c-sec-100);
+      color: var(--c-blue);
+}
+
+.has-bg{
+  background-color: var(--c-orange);
+}
+
+.col{
+  width:25%;
+}
+
+/* specific in targeting*/
+.col img{ 
+  width:100%;
+}
+
+h1{
+  font-family: "Eczar", serif;
+  font-size: 8em;
+
+}
+
+.button{
+    background-color: var(--c-red);
+    color: white;
+    padding: var(--space-05) var(--space-1); /*1 = vertical, 2= horizontal axis*/
+    border-radius: var(--space-05); /* to round the corners*/
+    font-size: .9em;
+    margin: var(--space-1) 0; /* 1em for vertical and no space for horizontal*/
+    display: block;
+}
+
+
+/*Style for third section*/
+.card {
+  width: 25%;
+  padding: var(--space-1);
+  border-radius: var(--space-05);
+}
+
+.card img {
+  width: 100%; /*ca veut dire quoi*/
 }
